@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    /*volemos un elemento tridimencional*/
+    z-index: 1;
+}
+
+.headerStyle {
+    color: rgb(51, 124, 192);
+}
+
+.datosPersonajes {
+    margin-top: 140px;
+    margin-bottom: 60px;
+}
