@@ -64,6 +64,6 @@ const paginacion = (data) => {
     document.getElementById("paginacion").innerHTML = html;
 };
 
-
+document.getElementById("titleAPI").innerHTML="Rick and Moryt API por @AlejoVela";
 //Ejecutamos
 getData(API);
