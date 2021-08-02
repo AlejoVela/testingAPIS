@@ -41,16 +41,17 @@ const pokeData =  (data) => {
 const llenarDatos = (data, html) => {
     console.log(data);
     html = "";
-        html += '<div class="col col-3 mt-2">'; //por estandar se recomienda usar comilla simple al dibujar html en js
-        html += '<div class="card" style="width: 17rem;">';
-        html += `<img src="${data.sprites.other.dream_world.front_default}" class="card-img-top" alt="${data.name}" style="height: 12rem;";>`;
-        html += '<div class="card-body">';
-        html += `<h5 class="card-title">${data.name}</h5>`;
-        html += `<p class="lead card-text">Peso: ${financial(data.weight*0.1)} kg</p>`;
-        html += `<p class="lead card-text">Altura: ${financial(data.height*0.1)} m</p>`;
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
+        html += `<div class="col col-3 mt-2">
+        <div class="card" style="width: 17rem;">
+        <img src="${data.sprites.other.dream_world.front_default}" class="card-img-top" alt="${data.name}"         
+        style="height: 12rem;";>
+        <div class="card-body">
+        <h5 class="card-title">${data.name}</h5>        
+        <p class="lead card-text">Peso: ${financial(data.weight*0.1)} kg</p>
+        <p class="lead card-text">Altura: ${financial(data.height*0.1)} m</p>
+        </div>
+        </div>
+        </div>`;
     $datosPersonajes.innerHTML += html;
 };
 
