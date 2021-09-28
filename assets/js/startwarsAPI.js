@@ -1,16 +1,14 @@
 const API = "https://swapi.dev/api/people/";
 
 
-const getData = (url) => {
+const getData = async (url) => {
     document.getElementById("titleAPI").innerHTML = "Starwars API by @AlejoVela";
-    return fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-            llenarDatos(json.results), pagination(json)
-        })
-        .catch((error) => {
-            console.log("Error: " + error);
-        })
+    
+    const json = await (await fetch(url)).json();
+
+    llenarDatos(json.results);
+    pagination(json);
+    console.log(json);
 };
 
 const llenarDatos = (data) => {
